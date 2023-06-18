@@ -1,0 +1,24 @@
+.image_previewPage{
+    width: 85%;
+    height: 350px;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px black;
+    border-radius: 35px;
+}
+
+.section_previewVideo{
+    display: flex;
+}
+.section_left_previewVideo{
+    width: 40%;
+}
+.section_right_previewVideo{
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section_navigation_previewVideo{
+    margin-top: 50px;
+}

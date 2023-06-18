@@ -1,0 +1,21 @@
+table,
+td {
+    border: 1px solid #333;
+    border-collapse: collapse;
+}
+
+html {
+    height: 100%;
+    overflow-x: hidden;
+}
+body{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    background-image: url("https://www.radiofrance.fr/s3/cruiser-production/2020/12/dd59333f-2da8-4cf8-a1ab-72c60b683610/1200x680_gettyimages-578238551.jpg");
+    background-size: cover;
+    backdrop-filter: blur(30px);
+    z-index: -1;
+}

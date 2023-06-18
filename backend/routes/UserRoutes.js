@@ -1,0 +1,22 @@
+var express = require("express")
+var User = require("../controllers/UserController")
+const router = express.Router()
+
+router.post("/user", User.createUser)
+router.post("/user/login", User.getUserToLogin)
+router.post("/user/getCookie", User.getCookie)
+router.get("/user/logout", User.logOut)
+router.post("/user/getUserId", User.getUserId)
+router.post("/user/getUserById", User.getUserById)
+router.post("/user/searchUserAllReadyExist", User.searchUserAllReadyExist)
+router.put("/user/updateUser", User.updateUser)
+router.delete("/user/deleteUser/:id", User.deleteUser)
+router.get("/user/getAllUsers", User.getAllUsers)
+router.put("/user/changeRoleUser", User.changeRoleUser)
+router.get("/user/numberOfUsers", User.numberOfUsers)
+router.put("/user/addSubscription", User.addSubscription)
+router.put("/user/removeSubscription", User.removeSubscription)
+router.post("/user/sumOfSubscriptions", User.sumOfSubscriptions)
+router.get("/user/getRole", User.getRole)
+
+module.exports = router;

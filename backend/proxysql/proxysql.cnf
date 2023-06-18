@@ -1,0 +1,16 @@
+mysql-monitor_username=usernameproxy
+mysql-monitor_password=root
+
+admin_variables=
+{
+  admin_credentials="admin:root"
+  mysql_ifaces="0.0.0.0:6032"
+}
+
+mysql_servers_table=
+(
+  { address="database-service", port=3306, hostgroup=10 },
+  { address="database-slave", port=3306, hostgroup=20 }
+)
+
+mysql_replication_hostgroups=10,20

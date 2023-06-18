@@ -1,0 +1,87 @@
+version: '3.8'
+services:
+  minio:
+    image: minio/minio
+    command: server /data --console-address ":9001"
+    ports:
+      - '9000:9000'
+      - '9001:9001'
+    environment:
+      - MINIO_ACCESS_KEY=minioadmin
+      - MINIO_SECRET_KEY=minioadmin
+    volumes:
+      - minio-data:/data
+    networks:
+      - my-network
+
+  database-master:
+    container_name: database-master
+    image: mysql:5.7
+    volumes:
+      - db:/var/lib/mysql-master
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: "isee"
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "password"
+      MYSQL_REPLICATION_MODE: "master"
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+    networks:
+      - my-network
+
+  database-slave:
+    container_name: database-slave
+    image: mysql:5.7
+    volumes:
+      - db:/var/lib/mysql-slave
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: "isee"
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "password"
+      MYSQL_REPLICATION_MODE: slave
+      MYSQL_MASTER_HOST: mysql-master
+      MYSQL_MASTER_PORT: 3306
+      MYSQL_MASTER_USER: user
+      MYSQL_MASTER_PASSWORD: password
+    networks:
+      - my-network
+
+  backend-service:
+    hostname: backend-service
+    build: ./backend/
+    container_name: backend-service
+    ports:
+      - "3003:3003"
+    depends_on:
+      - database-master
+      - database-slave
+      - minio
+    networks:
+      - my-network
+    restart: always
+
+  frontend-service:
+    hostname: frontend-service
+    container_name: frontend-service
+    build: ./frontend/
+    ports:
+      - "3000:3000"
+    depends_on:
+      - database-master
+      - database-slave
+    networks:
+      - my-network
+
+volumes:
+  db:
+  minio-data:
+  minio-config:
+
+networks:
+  my-network:

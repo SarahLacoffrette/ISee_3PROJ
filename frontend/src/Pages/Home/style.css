@@ -1,0 +1,79 @@
+
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.searchTerm {
+    width: 50%;
+    border: 3px solid rgba(78, 79, 99, 0.76);
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+
+.searchTerm:focus{
+    color: black;
+}
+
+.searchButton {
+    padding-top: 5px;
+    width: 40px;
+    height: 36px;
+    border: 1px solid rgba(78, 79, 99, 0.76);
+    background: rgba(78, 79, 99, 0.76);
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.small_field{
+    height: 20px;
+    width: 200px;
+    margin-top : 10px;
+    border-radius: 35px;
+    background-color: rgba(184, 184, 243, 0.11);
+    color: white;
+    padding: 5px;
+}
+
+.btn-center{
+    text-align: center;
+}
+
+.section_center_lr{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.section_registerA{
+    position: relative;
+    display: inline-block;
+}
+
+.tab{
+    color: white;
+    font-family: 'ubuntu';
+    font-weight: 300;
+    font-size: 20px;
+    padding: 20px;
+    margin: 10px;
+
+}
+
+tr{
+    border : 2px solid white;
+}
+
+td {
+    border: 1px solid white;
+}

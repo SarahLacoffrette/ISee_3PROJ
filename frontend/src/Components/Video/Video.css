@@ -1,0 +1,225 @@
+.image_thumbnail{
+    width: 300px;
+    height: 180px;
+    z-index: 1;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px black;
+    border-radius: 5%;
+}
+
+.section_nav_video{
+    margin: 20px;
+    display: inline-block;
+}
+.nav_video{
+    height: 200px;
+    display: block;
+    overflow-y: hidden;
+    width : 1790px;
+}
+
+.smallArtTitle{
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 20px;
+    margin-left: 20px;
+    padding-top : 10px;
+    padding-bottom : 10px;
+    color: white;
+}
+
+.section_smallTitle{
+    background-color: rgba(34, 33, 33, 0.855);
+    text-align: left;
+    margin-top: -50px;
+    height: 30px;
+    position: relative;
+    width: 300px;
+    z-index: 3;
+    overflow: hidden;
+}
+
+.comment{
+    display: flex;
+    align-items: center;
+}
+
+.comment_date{
+    font-family: 'ubuntu';
+    font-weight: 300;
+    font-size: 10px;
+    margin-left: 10px;
+}
+
+.comment_content{
+    margin-left: 30px;
+    font-family: 'ubuntu';
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.smallImage_user{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left: 100px;
+    margin-right: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.61);
+    background-color: white;
+}
+
+.section_underVideo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+.title_video {
+    margin-bottom: 0;
+}
+
+.group_left_underVideo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.smallImage_user {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.smallImage_user_chanel{
+    width: 50px;
+    height: 80px;
+}
+
+.text_creator {
+    margin-left: 8px;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+}
+
+.section_video{
+    width: 70%;
+}
+
+.section_video_right{
+    width: 30%;
+    height: 100%;
+}
+.page_video{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 0;
+}
+.section_liveChat{
+    right: 0;
+    width: 100%;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 35px;
+    box-shadow: 0px 0px 10px black;
+}
+
+.container_nav_v {
+    height: 100%;
+    overflow: auto;
+    text-align: center;
+}
+
+.nav_video_grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.container_nav_grid{
+    overflow: auto;
+}
+
+.video{
+    width: 95%;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    background-color: black;
+    border-radius: 35px;
+    box-shadow: 0px 0px 10px black;
+}
+
+.title_h1{
+    color: white;
+    text-shadow: 0px 0px 10px black;
+    font-family: 'Ubuntu';
+    font-weight: 700;
+}
+
+.title_h2{
+    color: white;
+    text-shadow: 0px 0px 10px black;
+    font-family: 'Ubuntu';
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.text{
+    color: white;
+    text-shadow: 0px 0px 10px black;
+    font-family: 'Ubuntu';
+    font-weight: 300;
+}
+
+.text_creator{
+    color: white;
+    text-shadow: 0px 0px 10px black;
+    font-family: 'Ubuntu';
+    font-weight: 300;
+    font-size: 15px;
+}
+.title_video{
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.buttonVideo{
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    border: none;
+}
+
+.section_description{
+    margin : 30px;
+}
+
+.section_addComment{
+    margin : 30px;
+}
+
+.field{
+    height: 40px;
+    width: 1000px;
+    margin-right : 50px;
+    border-radius: 35px;
+    background-color: rgba(184, 184, 243, 0.11);
+    color: white;
+    padding: 5px;
+}
+
+.comment{
+    color: white;
+    margin: 40px;
+}
+
+.share{
+    position: absolute;
+    margin-top: 10px;
+}
